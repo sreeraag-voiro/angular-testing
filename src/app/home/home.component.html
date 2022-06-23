@@ -1,0 +1,10 @@
+<section class="section is-small">
+    <div class="container">
+        <div class="columns">
+            <div class="column" *ngFor="let user of users">
+                <app-card [user]="user" (reverseName)="handleReverseName(user.id)"></app-card>
+            </div>
+        </div>
+        <p *ngIf="reversedName">Reversed Name is {{reversedName}} </p>
+    </div>
+</section>
